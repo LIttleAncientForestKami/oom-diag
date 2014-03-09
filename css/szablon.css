@@ -1,0 +1,143 @@
+/* slajd z tytułem prezentacji */
+section#start {
+  /* font, background? */
+}
+
+/* tytuł całej prezentacji */
+h1#presentation_title {
+  color: cyan;
+  /* font family, size, other important things */
+}
+
+/* obrazek o mnie */
+section#me {
+  width: 1300px;
+  height: 768px;
+}
+img#me {
+  display: block;
+  margin-left: auto;
+  margin-right : auto; 
+}
+
+/* podsumowanie */
+section.essence {
+ -moz-border-radius: 1em 4em 1em 4em;
+  border-radius: 1em 4em 1em 4em; 
+  background: grey;
+}
+section.final {
+  background-image: url("../img/ramka.jpeg");
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: cover;
+}
+
+/* wyróżnienia */
+strong.red {
+  color: red
+}
+
+/* cytaty - quotes */
+blockquote p {
+  color: orange;
+  quotes: '\201E' '\201D' '\00BB' '\00AB'; 
+  font-size: 20px;
+  font-style: italic;
+  line-height: 30px;
+  padding: 0px 15px 0px 0px;
+  float: left;
+  background: url(../images/quote_down.png) bottom right no-repeat;
+}
+
+blockquote {
+  padding: 25px;
+  font-size: 22px;    
+  background: url(../img/quote_up.jpeg) top left no-repeat;
+}
+
+cite {
+  font-size: 15px;
+  float: right;
+  line-height: 20px;    
+}
+
+ul.small-unordered-list li {
+  font-size: 15px;
+  line-height: 20px;
+  color: blue;
+}
+
+/* obrazki */
+img {
+  display: block;
+  width: 900px;
+  height: 700px;
+}
+
+
+
+
+
+
+
+/* borrowed from original impress.js demo style */
+.step {
+    position: relative;
+    width: 900px;
+    padding: 40px;
+    margin: 20px auto;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: 'PT Serif', georgia, serif;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+/* my own addition for better images in booklet */
+section#why-measure.step {
+  width: 1000px;
+}
+
+
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.3;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }
+
+/* fallback-message */
+.fallback-message {
+    font-family: sans-serif;
+    line-height: 1.3;
+
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border: 1px solid #E4C652;
+    border-radius: 10px;
+    background: #EEDC94;
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
+}
+
+.impress-supported .fallback-message {
+    display: none;
+}
+/* borrowed section end */
+
