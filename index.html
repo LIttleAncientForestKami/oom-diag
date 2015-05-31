@@ -1,0 +1,91 @@
+<!doctype html> 
+<!-- http://www.w3.org/International/questions/qa-lang-why.en -->
+<!-- TODO add styling for EN / PL where it matters -->
+<html lang="en"> 
+
+<head>         
+<title>@LAFK_pl: Diagnosing OutOfMemory error in Java</title>         
+<meta name="author" content="@LAFK_pl">
+
+<!-- SEO time! -->
+<meta name="abstract" content="Interactive decision tree for OOM diagnosis in Java">
+<meta name="description" content="Interactively choose which OutOfMemory error you have: heap, PermGen or native. Then find what to do with it, as each needs slightly different approach.">
+<meta name="keywords" content="oom OutOfMemoryError java.lang.OutOfMemoryError OutOfMemory Java memory heap space native thread PermGen MAT jmap OQL C-heap">
+
+
+<!-- IE, highest available mode please, perhaps will do for Impress? -->
+<!-- http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Charset is UNICODE, encoding is...
+http://stackoverflow.com/questions/4696499/meta-charset-utf-8-vs-meta-http-equiv-content-type -->
+<meta charset="UTF-8">
+
+<!-- Stylesheets and favicon -->
+
+
+<!-- favicon (animated and shortcut one) -->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<!--  <link rel="icon" type="image/gif" href="img/animated_favicon.gif"> -->
+  <link rel="stylesheet" href="css/szablon.css">
+
+</head>     
+<body>     
+
+<article id="impress" class="impress-not-supported">
+
+  <div class="fallback-message">
+        <p>Your browser <strong>doesn't support the features required</strong> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <strong>Firefox</strong,> <strong>Chrome</strong> or <strong>Safari</strong> browser.</p>
+    </div>
+
+
+
+<section id="start" class="step">
+  <h1 id="presentation_title">Interactively diagnose Java OutOfMemoryError</h1>
+  <p>Shows what can cause it and what steps may help. 
+  press <kbd>right arrow key</kbd>
+</section>
+
+<section class="step" data-y="400" scale="2">
+Choose:
+  <ol>
+    <li><a href="#javaheap">Java heap space</a></li>
+    <li><a href="#permgen">PermGen space</a></li>
+    <li><a href="#c-heap">native space</a></li>
+  </ol> 
+</section>
+
+
+<section id="javaheap" class="step oom" data-y="800"> 
+  java.lang.OutOfMemoryError: Java heap space
+</section>
+
+<section id="permgen" class="step oom" data-x="-1000" data-y="800">
+    java.lang.OutOfMemoryError: unable to create new native thread
+</section>
+
+
+<section id="c-heap" class="step oom" data-x="1000" data-y="800"> 
+    java.lang.OutOfMemoryError: PermGen space
+</section>
+  
+
+
+<section class="step" data-x="2400" data-y="1800" data-z="-1600" data-rotate-z="45" data-rotate-y="45"> 
+  <blockquote>
+    <p>Thrown when the Java Virtual Machine cannot allocate an object because it is out of memory, and no more memory could be made available by the garbage collector.</p>
+  </blockquote>
+  <cite> - Oracle Java 7 API: http://docs.oracle.com/javase/7/docs/api/java/lang/OutOfMemoryError.html</cite> 
+</section>
+
+
+<script type="text/javascript" src="js/impress.js"></script>
+<script>
+  var impress = impress();
+  impress.init();
+</script>
+</article>
+
+</body> 
+</html>
